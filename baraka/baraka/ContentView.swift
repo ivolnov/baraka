@@ -7,15 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+struct ContentView: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> HomeViewController {
+        HomeViewController()
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+    func updateUIViewController(_ uiViewController: HomeViewController, context: Context) {}
 }

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488BE27EDE802003F7F73 /* barakaApp.swift */; };
-		9EE488C127EDE802003F7F73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488C027EDE802003F7F73 /* ContentView.swift */; };
 		9EE488C327EDE803003F7F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE488C227EDE803003F7F73 /* Assets.xcassets */; };
-		9EE488C627EDE803003F7F73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE488C527EDE803003F7F73 /* Preview Assets.xcassets */; };
 		9EE488D027EDE803003F7F73 /* barakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488CF27EDE803003F7F73 /* barakaTests.swift */; };
 		9EE488DA27EDE803003F7F73 /* barakaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488D927EDE803003F7F73 /* barakaUITests.swift */; };
 		9EE488DC27EDE803003F7F73 /* barakaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488DB27EDE803003F7F73 /* barakaUITestsLaunchTests.swift */; };
+		9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488E827EDEB48003F7F73 /* ContentView.swift */; };
+		9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 /* Begin PBXFileReference section */
 		9EE488BB27EDE802003F7F73 /* baraka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baraka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488BE27EDE802003F7F73 /* barakaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaApp.swift; sourceTree = "<group>"; };
-		9EE488C027EDE802003F7F73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EE488C227EDE803003F7F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9EE488C527EDE803003F7F73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EE488CB27EDE803003F7F73 /* barakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488CF27EDE803003F7F73 /* barakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaTests.swift; sourceTree = "<group>"; };
 		9EE488D527EDE803003F7F73 /* barakaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barakaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488D927EDE803003F7F73 /* barakaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaUITests.swift; sourceTree = "<group>"; };
 		9EE488DB27EDE803003F7F73 /* barakaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9EE488E827EDEB48003F7F73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,19 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				9EE488BE27EDE802003F7F73 /* barakaApp.swift */,
-				9EE488C027EDE802003F7F73 /* ContentView.swift */,
 				9EE488C227EDE803003F7F73 /* Assets.xcassets */,
-				9EE488C427EDE803003F7F73 /* Preview Content */,
+				9EE488E827EDEB48003F7F73 /* ContentView.swift */,
+				9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */,
 			);
 			path = baraka;
-			sourceTree = "<group>";
-		};
-		9EE488C427EDE803003F7F73 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9EE488C527EDE803003F7F73 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9EE488CE27EDE803003F7F73 /* barakaTests */ = {
@@ -231,7 +223,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EE488C627EDE803003F7F73 /* Preview Assets.xcassets in Resources */,
 				9EE488C327EDE803003F7F73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EE488C127EDE802003F7F73 /* ContentView.swift in Sources */,
+				9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */,
 				9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */,
+				9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +410,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"baraka/Preview Content\"";
 				DEVELOPMENT_TEAM = 7446HG6F59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +438,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"baraka/Preview Content\"";
 				DEVELOPMENT_TEAM = 7446HG6F59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
