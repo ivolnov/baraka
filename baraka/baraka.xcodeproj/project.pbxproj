@@ -14,6 +14,10 @@
 		9EE488DC27EDE803003F7F73 /* barakaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488DB27EDE803003F7F73 /* barakaUITestsLaunchTests.swift */; };
 		9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488E827EDEB48003F7F73 /* ContentView.swift */; };
 		9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */; };
+		9EE488F027EDF139003F7F73 /* TickersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488EF27EDF139003F7F73 /* TickersService.swift */; };
+		9EE488F227EDFEF7003F7F73 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488F127EDFEF7003F7F73 /* NewsService.swift */; };
+		9EE488F527EE00A4003F7F73 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488F427EE00A4003F7F73 /* Ticker.swift */; };
+		9EE488F727EE00EC003F7F73 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488F627EE00EC003F7F73 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		9EE488DB27EDE803003F7F73 /* barakaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EE488E827EDEB48003F7F73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9EE488EF27EDF139003F7F73 /* TickersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersService.swift; sourceTree = "<group>"; };
+		9EE488F127EDFEF7003F7F73 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		9EE488F427EE00A4003F7F73 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		9EE488F627EE00EC003F7F73 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +102,10 @@
 		9EE488BD27EDE802003F7F73 /* baraka */ = {
 			isa = PBXGroup;
 			children = (
-				9EE488BE27EDE802003F7F73 /* barakaApp.swift */,
-				9EE488C227EDE803003F7F73 /* Assets.xcassets */,
-				9EE488E827EDEB48003F7F73 /* ContentView.swift */,
-				9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */,
+				9EE488F327EE0097003F7F73 /* Models */,
+				9EE488EE27EDF114003F7F73 /* App */,
+				9EE488ED27EDF10A003F7F73 /* Services */,
+				9EE488EC27EDF0F4003F7F73 /* Presentation */,
 			);
 			path = baraka;
 			sourceTree = "<group>";
@@ -117,6 +125,42 @@
 				9EE488DB27EDE803003F7F73 /* barakaUITestsLaunchTests.swift */,
 			);
 			path = barakaUITests;
+			sourceTree = "<group>";
+		};
+		9EE488EC27EDF0F4003F7F73 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9EE488ED27EDF10A003F7F73 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9EE488EF27EDF139003F7F73 /* TickersService.swift */,
+				9EE488F127EDFEF7003F7F73 /* NewsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9EE488EE27EDF114003F7F73 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9EE488BE27EDE802003F7F73 /* barakaApp.swift */,
+				9EE488C227EDE803003F7F73 /* Assets.xcassets */,
+				9EE488E827EDEB48003F7F73 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9EE488F327EE0097003F7F73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EE488F427EE00A4003F7F73 /* Ticker.swift */,
+				9EE488F627EE00EC003F7F73 /* News.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE488F227EDFEF7003F7F73 /* NewsService.swift in Sources */,
+				9EE488F527EE00A4003F7F73 /* Ticker.swift in Sources */,
 				9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */,
+				9EE488F027EDF139003F7F73 /* TickersService.swift in Sources */,
+				9EE488F727EE00EC003F7F73 /* News.swift in Sources */,
 				9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */,
 				9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */,
 			);
