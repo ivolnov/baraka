@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0D78CC27EED18C00D7D41F /* TickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78CB27EED18C00D7D41F /* TickerCell.swift */; };
+		9E0D78CE27EED1D500D7D41F /* ArtiicleCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78CD27EED1D500D7D41F /* ArtiicleCardCell.swift */; };
+		9E0D78D027EED1E900D7D41F /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78CF27EED1E900D7D41F /* ArticleCell.swift */; };
 		9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488BE27EDE802003F7F73 /* barakaApp.swift */; };
 		9EE488C327EDE803003F7F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE488C227EDE803003F7F73 /* Assets.xcassets */; };
 		9EE488D027EDE803003F7F73 /* barakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488CF27EDE803003F7F73 /* barakaTests.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0D78CB27EED18C00D7D41F /* TickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerCell.swift; sourceTree = "<group>"; };
+		9E0D78CD27EED1D500D7D41F /* ArtiicleCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiicleCardCell.swift; sourceTree = "<group>"; };
+		9E0D78CF27EED1E900D7D41F /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		9EE488BB27EDE802003F7F73 /* baraka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baraka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488BE27EDE802003F7F73 /* barakaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaApp.swift; sourceTree = "<group>"; };
 		9EE488C227EDE803003F7F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0D78CA27EED14300D7D41F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D78CB27EED18C00D7D41F /* TickerCell.swift */,
+				9E0D78CD27EED1D500D7D41F /* ArtiicleCardCell.swift */,
+				9E0D78CF27EED1E900D7D41F /* ArticleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9EE488B227EDE802003F7F73 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 		9EE488EC27EDF0F4003F7F73 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D78CA27EED14300D7D41F /* Cells */,
 				9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */,
 			);
 			path = Presentation;
@@ -297,8 +314,11 @@
 				9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */,
 				9EE488F027EDF139003F7F73 /* TickersService.swift in Sources */,
 				9EE488F727EE00EC003F7F73 /* News.swift in Sources */,
+				9E0D78CC27EED18C00D7D41F /* TickerCell.swift in Sources */,
 				9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */,
 				9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */,
+				9E0D78D027EED1E900D7D41F /* ArticleCell.swift in Sources */,
+				9E0D78CE27EED1D500D7D41F /* ArtiicleCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
