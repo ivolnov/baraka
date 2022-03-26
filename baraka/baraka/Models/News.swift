@@ -18,6 +18,7 @@ struct News: Codable {
 // MARK: - Article
 
 struct Article: Codable {
+    let id = UUID().uuidString
     let author, title: String?
     let description: String
     let url: String

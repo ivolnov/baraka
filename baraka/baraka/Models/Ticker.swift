@@ -8,6 +8,7 @@
 import Foundation
 
 struct Ticker {
+    let id = UUID().uuidString
     let symbol: String
     let price: Double
 }

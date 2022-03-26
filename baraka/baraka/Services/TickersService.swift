@@ -34,7 +34,9 @@ final class TickerServiceImpl {
     }
     
     private func convert(dataFrame: DataFrame) -> [Ticker] {
-        [] // TODO: map it
+         (dataFrame.grouped(by: "STOCK") as! RowGrouping<String>)
+            .compactMap { grouping in grouping.group.rows.randomElement() }
+            .map { row in Ticker(symbol: row[0] as! String, price: row[1] as! Double)  }
     }
     
     private func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> DataFrame {
