@@ -15,13 +15,19 @@ final class ArticleCardCell: UICollectionViewCell {
     
     private lazy var title: UILabel = {
         let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         return label
     }()
     
     private lazy var image: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.cornerRadius = .radius.small
+        image.clipsToBounds = true
         return image
     }()
     
@@ -41,13 +47,13 @@ final class ArticleCardCell: UICollectionViewCell {
         addSubview(image)
         
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-            title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-            image.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8),
-            image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            image.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
-            image.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8)
+            image.topAnchor.constraint(equalTo: self.topAnchor, constant: .margin.small),
+            image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
+            image.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
+            title.topAnchor.constraint(equalTo: image.bottomAnchor, constant: .margin.small),
+            title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
+            title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -.margin.medium)
         ])
     }
     
