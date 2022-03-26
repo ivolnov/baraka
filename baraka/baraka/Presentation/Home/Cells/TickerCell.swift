@@ -42,8 +42,7 @@ final class TickerCell: UICollectionViewCell {
             symbol.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             price.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             symbol.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            price.leadingAnchor.constraint(equalTo: symbol.trailingAnchor, constant: 8),
-            
+            price.leadingAnchor.constraint(equalTo: symbol.trailingAnchor, constant: 8)
         ])
     }
     
