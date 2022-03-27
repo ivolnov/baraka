@@ -22,6 +22,7 @@ final class ArticleCell: UICollectionViewCell {
     
     private lazy var title: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         return label
@@ -31,8 +32,8 @@ final class ArticleCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .secondaryLabel
-        label.textAlignment = .right
+        label.textColor = .tertiaryLabel
+        label.textAlignment = .left
         return label
     }()
     
@@ -49,6 +50,7 @@ final class ArticleCell: UICollectionViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = .radius.small
+        image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
         return image
     }()
@@ -68,23 +70,29 @@ final class ArticleCell: UICollectionViewCell {
     private func setUp() {
         
         addSubview(title)
-        addSubview(date)
         addSubview(image)
         addSubview(text)
+        addSubview(date)
         
         NSLayoutConstraint.activate([
+            
             title.topAnchor.constraint(equalTo: self.topAnchor, constant: .margin.small),
             title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
-            date.bottomAnchor.constraint(equalTo: title.bottomAnchor),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
+            
+            date.topAnchor.constraint(equalTo: title.bottomAnchor, constant: .margin.small),
             date.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
-            date.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: .margin.small),
-            image.topAnchor.constraint(equalTo: title.bottomAnchor, constant: .margin.small),
+            date.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
+            
+            image.topAnchor.constraint(equalTo: date.bottomAnchor, constant: .margin.small),
             image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
             image.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
+            
             text.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .margin.small),
             text.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.margin.small),
             text.topAnchor.constraint(equalTo: image.bottomAnchor, constant: .margin.small),
             text.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -.margin.small)
+            
         ])
     }
     

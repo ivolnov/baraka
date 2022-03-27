@@ -1,5 +1,5 @@
 //
-//  HomeViewSnapShotBuilder.swift
+//  HomeViewSnapshotBuilder.swift
 //  baraka
 //
 //  Created by Ivan Volnov on 26.03.2022.
@@ -9,7 +9,7 @@ import UIKit
 
 typealias HomeViewSnapshot = NSDiffableDataSourceSnapshot<Section, Cell>
 
-final class HomeViewSnapShotBuilder {
+final class HomeViewSnapshotBuilder {
     
     private let cardsSectionSize = 6
     

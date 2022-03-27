@@ -77,10 +77,11 @@ final class HomeViewLayout: UICollectionViewCompositionalLayout {
                                                        heightDimension: .fractionalHeight(0.5)))
                 item.contentInsets = .horizontalSmall
                 
+                let squareDevices = UIScreen.main.bounds.height / UIScreen.main.bounds.width < 1.8
                 
                 let containerGroup = NSCollectionLayoutGroup.vertical(
                     layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                       heightDimension: .fractionalHeight(0.85)),
+                                                       heightDimension: .fractionalHeight(squareDevices ? 1.2 : 0.9)),
                     subitems: [item])
                 let section = NSCollectionLayoutSection(group: containerGroup)
                 

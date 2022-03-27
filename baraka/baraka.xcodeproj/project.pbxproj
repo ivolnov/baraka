@@ -17,7 +17,7 @@
 		9E0D78DE27EF718900D7D41F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78DD27EF718900D7D41F /* Cell.swift */; };
 		9E0D78E027EF792D00D7D41F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */; };
 		9E0D78E227EF7A7400D7D41F /* HomeViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */; };
-		9E0FB44027EFA50700069ED9 /* HomeViewSnapShotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FB43F27EFA50700069ED9 /* HomeViewSnapShotBuilder.swift */; };
+		9E0FB44027EFA50700069ED9 /* HomeViewSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */; };
 		9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488BE27EDE802003F7F73 /* barakaApp.swift */; };
 		9EE488C327EDE803003F7F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE488C227EDE803003F7F73 /* Assets.xcassets */; };
 		9EE488D027EDE803003F7F73 /* barakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488CF27EDE803003F7F73 /* barakaTests.swift */; };
@@ -58,7 +58,7 @@
 		9E0D78DD27EF718900D7D41F /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLayout.swift; sourceTree = "<group>"; };
-		9E0FB43F27EFA50700069ED9 /* HomeViewSnapShotBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapShotBuilder.swift; sourceTree = "<group>"; };
+		9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotBuilder.swift; sourceTree = "<group>"; };
 		9EE488BB27EDE802003F7F73 /* baraka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baraka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488BE27EDE802003F7F73 /* barakaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaApp.swift; sourceTree = "<group>"; };
 		9EE488C227EDE803003F7F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		9E0FB43E27EFA4FB00069ED9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9E0FB43F27EFA50700069ED9 /* HomeViewSnapShotBuilder.swift */,
+				9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 				9E0D78D527EF114800D7D41F /* HomeSectionHeaderView.swift.swift in Sources */,
 				9EE488F727EE00EC003F7F73 /* News.swift in Sources */,
 				9E0D78CC27EED18C00D7D41F /* TickerCell.swift in Sources */,
-				9E0FB44027EFA50700069ED9 /* HomeViewSnapShotBuilder.swift in Sources */,
+				9E0FB44027EFA50700069ED9 /* HomeViewSnapshotBuilder.swift in Sources */,
 				9E0D78DC27EF716F00D7D41F /* Section.swift in Sources */,
 				9E0D78D827EF68CE00D7D41F /* HomeViewModel.swift in Sources */,
 				9E0D78DE27EF718900D7D41F /* Cell.swift in Sources */,

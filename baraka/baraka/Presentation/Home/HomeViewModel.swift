@@ -19,7 +19,7 @@ final class HomeViewModel {
         newsService
             .articles()
             .combineLatest(tickerService.tickers())
-            .map { articles, tickers in HomeViewSnapShotBuilder().build(articles: articles, tickers: tickers) }
+            .map { articles, tickers in HomeViewSnapshotBuilder().build(articles: articles, tickers: tickers) }
             .replaceError(with: nil)
             .assign(to: &$snapshot)
         
