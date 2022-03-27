@@ -1,5 +1,5 @@
 //
-//  Constants.swift.swift
+//  Constants.swift
 //  baraka
 //
 //  Created by Ivan Volnov on 27.03.2022.

@@ -18,7 +18,7 @@
 		9E0D78E027EF792D00D7D41F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */; };
 		9E0D78E227EF7A7400D7D41F /* HomeViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */; };
 		9E0FB44027EFA50700069ED9 /* HomeViewSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */; };
-		9E36AA8827F05EED00AD7E40 /* Constants.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */; };
+		9E36AA8827F05EED00AD7E40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8727F05EED00AD7E40 /* Constants.swift */; };
 		9E36AA8A27F05FAC00AD7E40 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */; };
 		9E36AA8D27F0627A00AD7E40 /* HomeDataSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */; };
 		9E36AA9027F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8F27F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift */; };
@@ -64,7 +64,7 @@
 		9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLayout.swift; sourceTree = "<group>"; };
 		9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotBuilder.swift; sourceTree = "<group>"; };
-		9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift.swift; sourceTree = "<group>"; };
+		9E36AA8727F05EED00AD7E40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceBuilder.swift; sourceTree = "<group>"; };
 		9E36AA8F27F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLayoutSectionBuilder.swift; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 		9E0FB43E27EFA4FB00069ED9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */,
 				9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */,
 			);
 			path = Utils;
@@ -166,7 +165,7 @@
 		9E0FB44127EFACAD00069ED9 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */,
+				9E36AA8727F05EED00AD7E40 /* Constants.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -174,6 +173,7 @@
 		9E36AA8B27F0623E00AD7E40 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */,
 				9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */,
 				9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */,
 			);
@@ -432,7 +432,7 @@
 				9E0D78D827EF68CE00D7D41F /* HomeViewModel.swift in Sources */,
 				9E0D78DE27EF718900D7D41F /* Cell.swift in Sources */,
 				9E36AA9027F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift in Sources */,
-				9E36AA8827F05EED00AD7E40 /* Constants.swift.swift in Sources */,
+				9E36AA8827F05EED00AD7E40 /* Constants.swift in Sources */,
 				9E0D78E027EF792D00D7D41F /* HomeDataSource.swift in Sources */,
 				9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */,
 				9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */,
