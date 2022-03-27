@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: UIViewControllerRepresentable {
     
-    func makeUIViewController(context: Context) -> HomeViewController {
-        HomeViewController()
+    func makeUIViewController(context: Context) -> UIViewController {
+        HomeModuleAssembly().assemble()
     }
 
-    func updateUIViewController(_ uiViewController: HomeViewController, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }

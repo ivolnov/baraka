@@ -45,22 +45,3 @@ final class HomeSectionHeaderView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-extension CGFloat {
-    
-    enum margin {
-        static let small: CGFloat = 8
-        static let medium: CGFloat = 16
-        static let large: CGFloat = 24
-        static let extraLarge: CGFloat = 32
-    }
-    
-    enum radius {
-        static let small: CGFloat = 8
-    }
-    
-}
-
-extension NSDirectionalEdgeInsets {
-    static let horizontalSmall = NSDirectionalEdgeInsets(top: 0, leading: .margin.small, bottom: 0, trailing: .margin.small)
-}

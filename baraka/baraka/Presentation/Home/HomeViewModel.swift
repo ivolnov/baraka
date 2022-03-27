@@ -9,17 +9,26 @@ import Combine
 
 final class HomeViewModel {
     
-    private let tickerService = TickerServiceImpl()
-    private let newsService = NewsServiceeImpl()
+    // Dependencies
+    private let snapshotBuilder: HomeViewSnapshotBuilder
+    private let tickerService: TickerService
+    private let newsService: NewsService
     
     @Published var snapshot: HomeViewSnapshot?
     @Published var loading = true
     
-    init() {
+    init(newsService: NewsService,
+         tickerService: TickerService,
+         snapshotBuilder: HomeViewSnapshotBuilder) {
+        
+        self.snapshotBuilder = snapshotBuilder
+        self.tickerService = tickerService
+        self.newsService = newsService
+        
         newsService
             .articles()
             .combineLatest(tickerService.tickers())
-            .map { articles, tickers in HomeViewSnapshotBuilder().build(articles: articles, tickers: tickers) }
+            .map { articles, tickers in self.snapshotBuilder.build(articles: articles, tickers: tickers) }
             .replaceError(with: nil)
             .assign(to: &$snapshot)
         

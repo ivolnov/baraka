@@ -8,14 +8,6 @@
 import UIKit
 import Kingfisher
 
-extension Date {
-    func timeAgoDisplay() -> String {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
-        return formatter.localizedString(for: self, relativeTo: Date())
-    }
-}
-
 final class ArticleCell: UICollectionViewCell {
     
     static let reuseIdentifier = "ArticleCell"
@@ -95,7 +87,6 @@ final class ArticleCell: UICollectionViewCell {
             
         ])
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

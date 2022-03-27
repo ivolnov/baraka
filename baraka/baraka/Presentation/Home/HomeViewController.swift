@@ -9,26 +9,52 @@ import Foundation
 import Combine
 import UIKit
 
-
-fileprivate typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Cell>
-
 class HomeViewController: UIViewController {
     
-    private lazy var dataSource = HomeDataSource(collectionView: collectionView)
-    private lazy var viewModel = HomeViewModel()
-    private lazy var layout = HomeViewLayout()
+    // Dependecies
+    private let layout: UICollectionViewCompositionalLayout
+    private let dataSourceBuilder: HomeDataSourceBuilder
+    private let viewModel: HomeViewModel
     
-    private var bag: Set<AnyCancellable> = []
-    
+    // UI
+    private lazy var dataSource = { dataSourceBuilder.build(with: collectionView) } ()
     private var activityIndicator: UIActivityIndicatorView!
     private var collectionView: UICollectionView!
     
+    private var bag: Set<AnyCancellable> = []
+    
+    init(layout: UICollectionViewCompositionalLayout,
+         viewModel: HomeViewModel,
+         dataSourceBuilder: HomeDataSourceBuilder) {
+        self.dataSourceBuilder = dataSourceBuilder
+        self.viewModel = viewModel
+        self.layout = layout
+        super.init(nibName: nil, bundle: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
         setUpActivityIndicator()
         bind()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - Private
+
+extension HomeViewController {
     
     private func setUpCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
@@ -88,13 +114,5 @@ class HomeViewController: UIViewController {
             activityIndicator.stopAnimating()
             activityIndicator.isHidden = true
         }
-    }
-}
-
-// MARK: - UICollectionViewDelegate
-
-extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

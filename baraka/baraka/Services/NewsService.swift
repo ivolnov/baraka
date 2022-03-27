@@ -8,17 +8,27 @@
 import Foundation
 import Combine
 
-final class NewsServiceeImpl {
+protocol NewsService: AnyObject {
+    func articles() -> AnyPublisher<[Article], Error>
+}
+
+final class NewsServiceImpl {
     
+    // Constants
     private let url = URL(string: "https://saurav.tech/NewsAPI/everything/cnn.json")!
     
-    private let session = URLSession.shared
+    // Dependencies
+    private let decoder: JSONDecoder
+    private let session: URLSession
     
-    private lazy var decoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        return decoder
-    }()
+    
+    init(session: URLSession, decoder: JSONDecoder) {
+        self.session = session
+        self.decoder = decoder
+    }
+}
+
+extension NewsServiceImpl: NewsService {
     
     func articles() -> AnyPublisher<[Article], Error> {
         session

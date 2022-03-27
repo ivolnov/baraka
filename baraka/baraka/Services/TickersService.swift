@@ -9,11 +9,27 @@ import Combine
 import Foundation
 import TabularData
 
+
+protocol TickerService: AnyObject {
+    func tickers() -> AnyPublisher<[Ticker], Error>
+}
+
 final class TickerServiceImpl {
     
+    // Constants
     private let url = URL(string: "https://raw.githubusercontent.com/dsancov/TestData/main/stocks.csv")!
     
-    private let session = URLSession.shared
+    // Dependencies
+    private let session: URLSession
+    
+    init(session: URLSession) {
+        self.session = session
+    }
+}
+
+// MARK: - TickerService
+
+extension TickerServiceImpl: TickerService {
     
     func tickers() -> AnyPublisher<[Ticker], Error> {
         Timer
@@ -25,6 +41,8 @@ final class TickerServiceImpl {
             .eraseToAnyPublisher()
     }
 }
+
+// MARK: - Private
 
 extension TickerServiceImpl {
     

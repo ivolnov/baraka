@@ -9,9 +9,18 @@ import UIKit
 
 typealias HomeViewSnapshot = NSDiffableDataSourceSnapshot<Section, Cell>
 
-final class HomeViewSnapshotBuilder {
-    
+protocol HomeViewSnapshotBuilder: AnyObject {
+    func build(articles: [Article], tickers: [Ticker]) -> HomeViewSnapshot
+}
+
+final class HomeViewSnapshotBuilderImpl {
+    // Constants
     private let cardsSectionSize = 6
+}
+
+// MARK: - HomeViewSnapshotBuilder
+
+extension HomeViewSnapshotBuilderImpl: HomeViewSnapshotBuilder {
     
     func build(articles: [Article], tickers: [Ticker]) -> HomeViewSnapshot {
         

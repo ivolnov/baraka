@@ -18,6 +18,11 @@
 		9E0D78E027EF792D00D7D41F /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */; };
 		9E0D78E227EF7A7400D7D41F /* HomeViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */; };
 		9E0FB44027EFA50700069ED9 /* HomeViewSnapshotBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */; };
+		9E36AA8827F05EED00AD7E40 /* Constants.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */; };
+		9E36AA8A27F05FAC00AD7E40 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */; };
+		9E36AA8D27F0627A00AD7E40 /* HomeDataSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */; };
+		9E36AA9027F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA8F27F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift */; };
+		9E36AA9327F067C700AD7E40 /* HomeModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E36AA9227F067C700AD7E40 /* HomeModuleAssembly.swift */; };
 		9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488BE27EDE802003F7F73 /* barakaApp.swift */; };
 		9EE488C327EDE803003F7F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE488C227EDE803003F7F73 /* Assets.xcassets */; };
 		9EE488D027EDE803003F7F73 /* barakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE488CF27EDE803003F7F73 /* barakaTests.swift */; };
@@ -59,6 +64,11 @@
 		9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLayout.swift; sourceTree = "<group>"; };
 		9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotBuilder.swift; sourceTree = "<group>"; };
+		9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift.swift; sourceTree = "<group>"; };
+		9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSourceBuilder.swift; sourceTree = "<group>"; };
+		9E36AA8F27F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLayoutSectionBuilder.swift; sourceTree = "<group>"; };
+		9E36AA9227F067C700AD7E40 /* HomeModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleAssembly.swift; sourceTree = "<group>"; };
 		9EE488BB27EDE802003F7F73 /* baraka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baraka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE488BE27EDE802003F7F73 /* barakaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barakaApp.swift; sourceTree = "<group>"; };
 		9EE488C227EDE803003F7F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,14 +132,15 @@
 		9E0D78D927EF715300D7D41F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9E36AA9127F067AD00AD7E40 /* Assembly */,
+				9E36AA8E27F0670E00AD7E40 /* CollectionViewLayout */,
+				9E36AA8B27F0623E00AD7E40 /* DataSource */,
 				9E0FB43E27EFA4FB00069ED9 /* Utils */,
 				9E0D78DA27EF715F00D7D41F /* Models */,
 				9E0D78D627EF68B300D7D41F /* Header */,
 				9E0D78CA27EED14300D7D41F /* Cells */,
 				9EE488EA27EDEBBA003F7F73 /* HomeViewController.swift */,
 				9E0D78D727EF68CE00D7D41F /* HomeViewModel.swift */,
-				9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */,
-				9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0FB43F27EFA50700069ED9 /* HomeViewSnapshotBuilder.swift */,
+				9E36AA8927F05FAC00AD7E40 /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -154,8 +166,35 @@
 		9E0FB44127EFACAD00069ED9 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9E36AA8727F05EED00AD7E40 /* Constants.swift.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		9E36AA8B27F0623E00AD7E40 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D78DF27EF792D00D7D41F /* HomeDataSource.swift */,
+				9E36AA8C27F0627A00AD7E40 /* HomeDataSourceBuilder.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		9E36AA8E27F0670E00AD7E40 /* CollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D78E127EF7A7400D7D41F /* HomeViewLayout.swift */,
+				9E36AA8F27F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift */,
+			);
+			path = CollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		9E36AA9127F067AD00AD7E40 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9E36AA9227F067C700AD7E40 /* HomeModuleAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		9EE488B227EDE802003F7F73 = {
@@ -383,6 +422,8 @@
 				9EE488F527EE00A4003F7F73 /* Ticker.swift in Sources */,
 				9EE488E927EDEB48003F7F73 /* ContentView.swift in Sources */,
 				9EE488F027EDF139003F7F73 /* TickersService.swift in Sources */,
+				9E36AA8D27F0627A00AD7E40 /* HomeDataSourceBuilder.swift in Sources */,
+				9E36AA9327F067C700AD7E40 /* HomeModuleAssembly.swift in Sources */,
 				9E0D78D527EF114800D7D41F /* HomeSectionHeaderView.swift.swift in Sources */,
 				9EE488F727EE00EC003F7F73 /* News.swift in Sources */,
 				9E0D78CC27EED18C00D7D41F /* TickerCell.swift in Sources */,
@@ -390,11 +431,14 @@
 				9E0D78DC27EF716F00D7D41F /* Section.swift in Sources */,
 				9E0D78D827EF68CE00D7D41F /* HomeViewModel.swift in Sources */,
 				9E0D78DE27EF718900D7D41F /* Cell.swift in Sources */,
+				9E36AA9027F0672900AD7E40 /* HomeViewLayoutSectionBuilder.swift in Sources */,
+				9E36AA8827F05EED00AD7E40 /* Constants.swift.swift in Sources */,
 				9E0D78E027EF792D00D7D41F /* HomeDataSource.swift in Sources */,
 				9EE488BF27EDE802003F7F73 /* barakaApp.swift in Sources */,
 				9EE488EB27EDEBBA003F7F73 /* HomeViewController.swift in Sources */,
 				9E0D78D027EED1E900D7D41F /* ArticleCell.swift in Sources */,
 				9E0D78CE27EED1D500D7D41F /* ArticleCardCell.swift in Sources */,
+				9E36AA8A27F05FAC00AD7E40 /* Date+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
