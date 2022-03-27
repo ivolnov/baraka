@@ -35,7 +35,8 @@ final class TickerCell: UICollectionViewCell {
     
     func configure(with model: Ticker) {
         symbol.text = model.symbol
-        price.text = String(format: "%.2f", model.price)
+        price.text = String(format: "%.2f", model.price) + " USD"
+        price.textColor = model.price > 0 ? .systemGreen : .systemRed
     }
     
     private func setUp() {
